@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 
 public class CurrencyConverterApiClient {
@@ -18,7 +19,7 @@ public class CurrencyConverterApiClient {
         HttpURLConnection connection = null;
         try {
             // Create a URL object with the API endpoint
-            URL apiUrl = new URL(url);
+            URL apiUrl = URI.create(url).toURL();
 
             // Open a connection to the API URL
             connection = (HttpURLConnection) apiUrl.openConnection();

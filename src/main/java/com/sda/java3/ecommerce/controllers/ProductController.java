@@ -45,7 +45,7 @@ public class ProductController extends BaseController {
         Product product = productService.getProductById(id);
         modelMap.addAttribute("breadcrumbs", Arrays.asList(
                 Breadcrumb.builder().name("Home").url("/").build(),
-                Breadcrumb.builder().name(product != null ? product.getName() : "").last(true).url(String.format("/product-detail/%s", id)).build()
+                Breadcrumb.builder().name(product != null ? product.getName() : "").last(true).url("/product-detail/%s".formatted(id)).build()
 
         ));
         modelMap.addAttribute("product", product);
@@ -59,7 +59,7 @@ public class ProductController extends BaseController {
         modelMap.addAttribute("breadcrumbs", Arrays.asList(
                 Breadcrumb.builder().name("Home").url("/").build(),
                 Breadcrumb.builder().name("Products").url("/products").build(),
-                Breadcrumb.builder().name(product != null ? product.getName() : "").last(true).url(String.format("/product-detail/%s", id)).build()
+                Breadcrumb.builder().name(product != null ? product.getName() : "").last(true).url("/product-detail/%s".formatted(id)).build()
 
         ));
         modelMap.addAttribute("product", product);
