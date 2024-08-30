@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ECommerceSystem {
 
@@ -59,7 +60,7 @@ public class ECommerceSystem {
         public String toJson() {
             return "{\n" +
                    "  \"name\": \"" + name + "\",\n" +
-                   "  \"orders\": " + orders.stream().map(Order::toJson).toList() + "\n" +
+                   "  \"orders\": " + orders.stream().map(Order::toJson).collect(Collectors.toList()) + "\n" +
                    "}";
         }
     }
