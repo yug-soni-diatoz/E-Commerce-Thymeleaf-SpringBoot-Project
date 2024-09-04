@@ -5,12 +5,11 @@ import com.sda.java3.ecommerce.services.category.CategoryService;
 import com.sda.java3.ecommerce.services.category.SaveCategoryRequest;
 import com.sda.java3.ecommerce.services.product.SaveProductRequest;
 import lombok.AllArgsConstructor;
-import lombok.var;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 

@@ -8,8 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
-
-import javax.persistence.*;
+import org.hibernate.type.UUIDCharType;
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
@@ -25,7 +25,7 @@ public class Product {
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name="uuid2", strategy = "uuid2")
     @Column(name = "id", updatable = false, nullable = false)
-    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Type(UUIDCharType.class)
     protected UUID id;
 
     @Column(name = "name")
@@ -65,7 +65,7 @@ public class Product {
     private String size;
 
     @Column(name = "category_id")
-    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Type(UUIDCharType.class)
     protected UUID categoryId;
 
     @JsonIgnore
