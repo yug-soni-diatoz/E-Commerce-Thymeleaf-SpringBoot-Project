@@ -9,8 +9,7 @@ public class StringLengthProcessor {
      * @param obj the input object to be processed
      */
     public void process(Object obj) {
-        if (obj instanceof String) {
-            String str = (String) obj;
+        if (obj instanceof String str) {
             int length = str.length();
             System.out.println("The length of the string is: " + length);
         } else {

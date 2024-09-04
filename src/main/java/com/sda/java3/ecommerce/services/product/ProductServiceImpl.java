@@ -38,7 +38,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getProducts(ProductListFilter filter) {
         if (filter != null && filter.getCategoryId() != null && !filter.getCategoryId().isEmpty()) {
-            Category category = categoryRepository.getById(UUID.fromString(filter.getCategoryId()));
+            Category category = categoryRepository.getReferenceById(UUID.fromString(filter.getCategoryId()));
             if (category != null)
                 filter.setCategoryName(category.getName());
         }
@@ -52,7 +52,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product getProductById(String id) {
         try {
-            Product product = productRepository.getById(UUID.fromString(id));
+            Product product = productRepository.getReferenceById(UUID.fromString(id));
             product.setViews(product.getViews() + 1);
             productRepository.save(product);
             return product;

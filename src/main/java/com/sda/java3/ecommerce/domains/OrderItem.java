@@ -7,8 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
-
-import javax.persistence.*;
+import org.hibernate.type.UUIDCharType;
+import jakarta.persistence.*;
 import java.util.UUID;
 
 @Data
@@ -23,11 +23,11 @@ public class OrderItem {
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name="uuid2", strategy = "uuid2")
     @Column(name = "id", updatable = false, nullable = false)
-    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Type(UUIDCharType.class)
     protected UUID id;
 
     @Column(name = "product_id")
-    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Type(UUIDCharType.class)
     protected UUID productId;
 
     @Column(name = "product_description")
@@ -40,7 +40,7 @@ public class OrderItem {
     protected double price;
 
     @Column(name = "category_id")
-    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Type(UUIDCharType.class)
     protected UUID categoryId;
 
     @Column(name = "category_name")
@@ -50,7 +50,7 @@ public class OrderItem {
     protected int quantity;
 
     @Column(name = "order_id")
-    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Type(UUIDCharType.class)
     protected UUID orderId;
 
     @JsonIgnore
