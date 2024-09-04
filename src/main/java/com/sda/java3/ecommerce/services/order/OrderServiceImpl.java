@@ -3,6 +3,8 @@ package com.sda.java3.ecommerce.services.order;
 import com.sda.java3.ecommerce.domains.Order;
 import com.sda.java3.ecommerce.repositories.OrderRepository;
 import org.springframework.stereotype.Service;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import java.util.List;
 
