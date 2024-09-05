@@ -6,6 +6,8 @@ import com.sda.java3.ecommerce.utils.Breadcrumb;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import javax.inject.Named;
+import javax.inject.Provider;
 
 import java.util.Arrays;
 

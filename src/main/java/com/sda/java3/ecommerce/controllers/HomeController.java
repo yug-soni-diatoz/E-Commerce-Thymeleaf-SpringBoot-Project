@@ -7,6 +7,8 @@ import com.sda.java3.ecommerce.services.product.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import javax.inject.Named;
+import javax.inject.Provider;
 
 import java.util.List;
 

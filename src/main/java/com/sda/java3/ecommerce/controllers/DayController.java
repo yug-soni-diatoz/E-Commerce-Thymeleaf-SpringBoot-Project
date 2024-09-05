@@ -4,6 +4,8 @@ import com.sda.java3.ecommerce.services.DayService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import javax.inject.Named;
+import javax.inject.Provider;
 
 @RestController
 public class DayController {

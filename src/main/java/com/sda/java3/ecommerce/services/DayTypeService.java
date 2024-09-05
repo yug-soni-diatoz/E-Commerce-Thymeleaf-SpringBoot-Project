@@ -1,6 +1,8 @@
 package com.sda.java3.ecommerce.services;
 
 import org.springframework.stereotype.Service;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
 @Service
 public class DayTypeService {

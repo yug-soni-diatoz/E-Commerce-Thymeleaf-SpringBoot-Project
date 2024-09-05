@@ -4,6 +4,8 @@ import com.sda.java3.ecommerce.domains.Category;
 import com.sda.java3.ecommerce.repositories.CategoryRepository;
 import lombok.var;
 import org.springframework.stereotype.Service;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import java.util.List;
 import java.util.Optional;

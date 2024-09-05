@@ -5,6 +5,8 @@ import com.sda.java3.ecommerce.services.product.ProductService;
 import com.sda.java3.ecommerce.utils.ProductListFilter;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.ModelMap;
+import javax.inject.Named;
+import javax.inject.Provider;
 
 @Component
 public class BaseController {

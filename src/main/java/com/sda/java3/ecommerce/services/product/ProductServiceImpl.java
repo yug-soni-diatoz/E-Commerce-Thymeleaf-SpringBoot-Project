@@ -8,6 +8,8 @@ import com.sda.java3.ecommerce.utils.ProductListFilter;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import java.time.LocalDateTime;
 import java.util.List;
