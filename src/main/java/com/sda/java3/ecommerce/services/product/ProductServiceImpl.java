@@ -21,6 +21,22 @@ public class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
 
+    private static final String USAGE =
+            "SplitCorpus paramFile\n"
+                    + "Parameters are:\n"
+                    + "\tcom.bbn.bue.splitCorpus.inputList: list of files to split. Optional.\n"
+                    + "\tcom.bbn.bue.splitCorpus.inputMap: docId to file map of files to split. Optional.\n"
+                    + "\tcom.bbn.bue.splitCorpus.outputDir: path to write output\n"
+                    + "\tcom.bbn.bue.splitCorpus.numChunks: the number of chunks to split the corpus into. Optional.\n"
+                    + "\tcom.bbn.bue.splitCorpus.chunkSize: the number of of files to put in each chunk. Optional.\n"
+                    + "\n"
+                    + "If inputList is given, output file lists will be written to outputDir/split/fileList.txt\n"
+                    + "\tand a list of these lists will be written to outputDir/listOfLists.txt\n"
+                    + "If inputMap is given, output file maps will be written to outputDir/split/fileMap.txt\n"
+                    + "\tand a list of these maps will be written to outputDir/listOfMaps.txt\n"
+                    + "At least one of inputList and inputMap must be specified.\n"
+                    + "Exactly one of numChunks and chunkSize may be specified.";
+
     public ProductServiceImpl(final ProductRepository clientRepository, final CategoryRepository categoryRepository) {
         this.productRepository = clientRepository;
         this.categoryRepository = categoryRepository;
